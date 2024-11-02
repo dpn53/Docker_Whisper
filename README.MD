@@ -6,9 +6,8 @@ https://github.com/openai/whisper?tab=readme-ov-file
 
 `pip install git+https://github.com/openai/whisper.git`
 
-**on Ubuntu or Debian**
+`apt update && apt install ffmpeg` (**on Ubuntu or Debian**)
 
-`apt update && apt install ffmpeg`
 
 **Usage**
 
