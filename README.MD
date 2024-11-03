@@ -9,12 +9,12 @@ https://github.com/openai/whisper?tab=readme-ov-file
 
 Note: The connection between the host machine and container is through the volume mapping (-v argument). 
 
-#### Step 1: Build docker image
+### Step 1: Build docker image
 `$docker_container_tag = "whisper"`
 
 `docker build -t $docker_container_tag .`
 
-#### Step 2: Set variables 
+### Step 2: Set variables 
 
 **Name of host folder with audio file**
 
@@ -40,7 +40,6 @@ Note: The connection between the host machine and container is through the volum
 `$transcription = "$($audio_filename).txt"`
 
 
-
-#### Step 3: Send audio file for transcription
+### Step 3: Send audio file for transcription
 
 `docker run --rm -v $volume_mapping -t $docker_container_tag whisper "$container_path/$audio_filename" --language English --model turbo > $transcription`
